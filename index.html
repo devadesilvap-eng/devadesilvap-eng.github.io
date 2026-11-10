@@ -1,6 +1,47 @@
 <!DOCTYPE html>
 
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#070d13" name="theme-color"/><meta content="Pahan De Silva — Security Engineer. L2/L3 SOC, threat hunting, incident response, Microsoft Defender, Google SecOps, identity security and AI automation." name="description"/><title>Pahan De Silva | Security Engineer · Portfolio</title><link href="assets/style.css" rel="stylesheet"/></head>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="#070d13" name="theme-color"/><meta content="Pahan De Silva — Security Engineer. L2/L3 SOC, threat hunting, incident response, Microsoft Defender, Google SecOps, identity security and AI automation." name="description"/><title>Pahan De Silva | Security Engineer · Portfolio</title><link href="assets/style.css" rel="stylesheet"/><style id="credential-style-fix">
+/* Credential section — embedded so the cards work even when a remote stylesheet is stale. */
+#education{position:relative;isolation:isolate;}
+#education .section-heading{margin-bottom:34px;}
+#education .credentials-head{display:flex;justify-content:space-between;align-items:center;gap:24px;margin:0 0 22px;padding-bottom:17px;border-bottom:1px solid #24443a;}
+#education .credentials-head .mini-heading{display:block;color:#00f58a;font:700 11px/1.5 'JetBrains Mono',monospace;letter-spacing:1.4px;margin-bottom:7px;}
+#education .credentials-head p{color:#9aafa9;font-size:13px;line-height:1.7;margin:0;}
+#education .credential-counter{display:inline-flex;align-items:center;white-space:nowrap;border:1px solid #27684a;color:#55ffa6;background:#103023;padding:10px 14px;border-radius:3px;font:700 11px 'JetBrains Mono',monospace;}
+#education .cert-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0;}
+#education .cert-card{display:flex;flex-direction:column;align-items:flex-start;position:relative;min-width:0;min-height:210px;padding:25px 23px 22px;border:1px solid #244c3c;border-radius:5px;background:linear-gradient(145deg,#10241e,#0b171b 74%);box-shadow:0 10px 25px #00000019;overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s;}
+#education .cert-card::before{content:'';position:absolute;inset:0 auto 0 0;width:3px;background:linear-gradient(#00ef83,#007447);}
+#education .cert-card::after{content:'✧';position:absolute;right:17px;top:12px;font-size:19px;color:#2d7654;}
+#education .cert-card:hover{transform:translateY(-4px);border-color:#28d47b;box-shadow:0 15px 35px #00000050;}
+#education .cert-provider{display:block;color:#49e497;text-transform:uppercase;letter-spacing:1.5px;font:700 10px/1.5 'JetBrains Mono',monospace;padding-right:24px;}
+#education .cert-card h3{font:650 clamp(15px,1.25vw,18px)/1.43 'Space Grotesk',sans-serif;color:#f1fff8;letter-spacing:-.3px;margin:19px 0 24px;flex:1;overflow-wrap:anywhere;}
+#education .cert-verify{display:inline-flex;align-items:center;color:#9dffc8;text-decoration:none;letter-spacing:1px;font:700 10px/1.5 'JetBrains Mono',monospace;padding:10px 0 0;border-top:1px solid #274b3c;width:100%;}
+#education .cert-verify:hover{color:white;}
+#education .education-bottom{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:27px;}
+#education .credential-panel{min-width:0;background:#0d1b1d;border:1px solid #2a493e;padding:26px;border-radius:5px;}
+#education .credential-panel .mini-heading{display:block;color:#46eca0;font:700 10px 'JetBrains Mono',monospace;letter-spacing:1.3px;margin-bottom:18px;}
+#education .credential{padding:13px 0 17px;margin:0;border-bottom:1px solid #244339;}
+#education .credential:last-child{border-bottom:0;padding-bottom:0;}
+#education .credential h3{color:#e4f8ee;font-size:15px;line-height:1.5;margin:0;}
+#education .credential p{color:#a1bcb0;font-size:12px;margin:5px 0 0;}
+#education .training-panel{display:block;border:1px solid #2a493e;border-radius:5px;background:#0c1a1e;margin-top:20px;}
+#education .training-panel>summary{display:flex;list-style:none;cursor:pointer;align-items:center;justify-content:space-between;gap:16px;padding:23px 26px;}
+#education .training-panel>summary::-webkit-details-marker{display:none;}
+#education .training-panel .mini-heading{display:block;color:#50ef9d;font:700 10px/1.5 'JetBrains Mono',monospace;letter-spacing:1.1px;margin-bottom:7px;}
+#education .training-summary{display:block;color:#aec2ba;font-size:12px;}
+#education .expand-symbol{font-size:24px;color:#57e89c;transition:transform .2s;}
+#education .training-panel[open] .expand-symbol{transform:rotate(45deg);}
+#education .training-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px;padding:5px 26px 25px;}
+#education .training-entry{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;padding:15px 0;border-bottom:1px solid #203b33;line-height:1.5;}
+#education .training-entry>div{flex:1;min-width:0;}
+#education .training-entry strong{display:block;color:#e3f8eb;font-size:12px;font-weight:650;overflow-wrap:anywhere;}
+#education .training-entry small{display:block;color:#6ddd9e;font-size:11px;margin-top:5px;}
+#education .training-entry>span{flex:0 0 auto;max-width:135px;text-align:right;color:#a1b7b0;font:10px/1.65 'JetBrains Mono',monospace;}
+#education .credential-note{color:#97afa5;font-size:11px;line-height:1.7;margin:15px 0 0;}
+#education .training-panel>.credential-note{margin:0;padding:0 26px 23px;}
+@media(max-width:1000px){#education .cert-cards{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:680px){#education .cert-cards,#education .education-bottom,#education .training-grid{grid-template-columns:minmax(0,1fr);}#education .credentials-head{align-items:flex-start;flex-direction:column;}#education .cert-card{min-height:174px;}#education .credential-panel{padding:20px;}#education .training-entry{flex-wrap:wrap;}#education .training-entry>span{max-width:none;text-align:left;}#education .training-grid{padding:0 20px 23px;}}
+</style></head>
 <body><div aria-hidden="true" class="backdrop"></div><header class="topbar"><a class="brand" href="#home"><span class="brand-mark">&gt;_</span> PAHAN<span class="green">_{SEC}</span></a><button aria-expanded="false" aria-label="Toggle navigation" class="menu" id="menu">☰</button><nav id="nav"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#github">GitHub</a><a href="#education">Credentials</a><a href="#contact">Connect</a></nav><a class="nav-cta" href="https://www.linkedin.com/in/pahan-de-silva-5728a8207/" rel="noopener" target="_blank">LET'S CONNECT ↗</a></header>
 <main><section class="hero section container" id="home"><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> SECURITY ENGINEER · COLOMBO, SRI LANKA</div><div class="code-tag">// defend · detect · investigate · automate</div><h1>PAHAN<br/><span>DE SILVA<span class="green">.</span></span></h1><div class="hero-role"><span class="prompt">$</span> <span id="typewriter">Security Engineer • SOC &amp; Cloud Security</span><span class="cursor">▌</span></div><p class="lead">Security Engineer delivering L2/L3 investigations for an Australian MSSP. Focused on threat detection, incident response, identity and cloud security, vulnerability management, and analyst-validated AI automation.</p><div class="actions"><a class="primary" href="#experience">EXPLORE MY WORK <span>↗</span></a><a class="outline" href="https://github.com/devadesilvap-eng" rel="noopener" target="_blank">GITHUB PROFILE ↗</a></div><div class="hero-metrics"><div><b>L2 / L3</b><span>Security operations</span></div><div><b>MULTI-TENANT</b><span>Australian MSSP environments</span></div><div><b>AI + SOC</b><span>Practical security automation</span></div></div></div><div aria-label="Animated security terminal" class="terminal"><div class="terminal-bar"><span class="dots">● ● ●</span><span>deva@security: ~</span><span>⌘</span></div><div class="terminal-body"><p><span class="prompt">❯</span> whoami</p><p class="value">Deva Pahan De Silva</p><p><span class="prompt">❯</span> cat specialization.txt</p><p class="value">SOC Operations<br/>Threat Hunting / Incident Response<br/>Cloud Security / Identity Protection<br/>AI Security / Automation</p><p><span class="prompt">❯</span> status --defenses</p><p><span class="status">● ACTIVE</span>   Continuous improvement</p><div class="terminal-divider"></div><p class="subtle">[ SOC ]   [ XDR ]   [ KQL ]   [ CLOUD ]</p><p><span class="prompt">❯</span> <span class="cursor">▌</span></p></div></div></section>
 <div aria-hidden="true" class="ticker"><div>THREAT DETECTION <span>✳</span> INCIDENT RESPONSE <span>✳</span> MICROSOFT DEFENDER <span>✳</span> GOOGLE SECOPS <span>✳</span> ZERO TRUST <span>✳</span> AI SECURITY <span>✳</span> THREAT HUNTING <span>✳</span></div></div>
