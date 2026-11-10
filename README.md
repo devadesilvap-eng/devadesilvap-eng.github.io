@@ -1,4 +1,4 @@
-# Deva Pahan De Silva — Portfolio Website
+# Pahan De Silva - Portfolio Website
 
 A responsive dark terminal-style cybersecurity portfolio, inspired by the structure of the referenced portfolio but created as an original design and personalized for Deva Pahan De Silva.
 
